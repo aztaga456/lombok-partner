@@ -26,10 +26,10 @@ export default function BookingConfirmationModal({
 
   if (!booking) return null;
 
-  // Format WhatsApp message URL using official WhatsApp number from flyer (+62 878-0935-0732)
+  // Format WhatsApp message URL using official WhatsApp number (+62 878-2088-0547)
   const formatWaMessage = () => {
     const text = `Halo Admin Lombok Partner! 🌴✨%0A%0ASaya ingin konfirmasi pesanan paket wisata saya:%0A%0A*Kode Booking:* ${booking.bookingCode}%0A*Paket:* ${booking.packageItem.name.id}%0A*Nama Pemesan:* ${booking.customerName}%0A*No. WhatsApp:* ${booking.whatsapp}%0A*Tanggal Berangkat:* ${booking.travelDate}%0A*Peserta:* ${booking.adults} Dewasa${booking.children > 0 ? `, ${booking.children} Anak` : ''}%0A${booking.hotelOption ? `*Pilihan Hotel:* ${booking.hotelOption}%0A` : ''}*Catatan:* ${booking.note || '-'}%0A*Total Estimasi:* Rp ${booking.totalPrice.toLocaleString('id-ID')}%0A%0AMohon petunjuk untuk konfirmasi jadwal dan pembayaran DP. Terima kasih! 🙏`;
-    return `https://wa.me/6287809350732?text=${text}`;
+    return `https://wa.me/6287820880547?text=${text}`;
   };
 
   const handleCopyCode = () => {

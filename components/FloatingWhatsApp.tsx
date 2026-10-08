@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
     const encoded = encodeURIComponent(
       message.trim() || 'Halo Lombok Partner! Saya ingin konsultasi paket wisata ke Lombok.'
     );
-    window.open(`https://wa.me/6287809350732?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/6287820880547?text=${encoded}`, '_blank');
     setIsOpen(false);
     setMessage('');
   };

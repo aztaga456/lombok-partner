@@ -143,7 +143,7 @@ export default function PriceMatrixModal({ isOpen, onClose }: PriceMatrixModalPr
                 <span className="text-[10px] uppercase font-bold text-slate-500 block">Booking Sekarang:</span>
                 <span className="text-base font-black text-slate-900 flex items-center gap-1.5">
                   <Phone className="w-4 h-4 text-emerald-600" />
-                  +62 878-0935-0732
+                  +62 878-2088-0547
                 </span>
               </div>
             </div>
@@ -156,13 +156,13 @@ export default function PriceMatrixModal({ isOpen, onClose }: PriceMatrixModalPr
               Liburan Nyaman, Bersama Lombok Partner
             </span>
             <a
-              href="https://wa.me/6287809350732?text=Halo%20Lombok%20Partner,%20saya%20tertarik%20dengan%20Paket%20Wisata%202%20Hari%201%20Malam"
+              href="https://wa.me/6287820880547?text=Halo%20Lombok%20Partner,%20saya%20tertarik%20dengan%20Paket%20Wisata%202%20Hari%201%20Malam"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3 rounded-full shadow-md transition-all"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
-              <span>Chat WhatsApp: +62 878-0935-0732</span>
+              <span>Chat WhatsApp: +62 878-2088-0547</span>
             </a>
           </div>
 

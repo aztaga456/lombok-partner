@@ -143,7 +143,7 @@ export default function HotelDatabaseSection() {
                   </span>
                 </div>
                 <a
-                  href={`https://wa.me/6281907604040?text=${encodeURIComponent(
+                  href={`https://wa.me/6287820880547?text=${encodeURIComponent(
                     `Halo Admin Lombok Partner, saya ingin info ketersediaan paket dengan hotel di kawasan ${activeLocationData.location}.`
                   )}`}
                   target="_blank"

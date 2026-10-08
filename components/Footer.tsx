@@ -56,7 +56,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://wa.me/6287809350732"
+                href="https://wa.me/6287820880547"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white border border-white/50 backdrop-blur-md font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg hover:scale-105 transition-all"
@@ -195,14 +195,8 @@ export default function Footer() {
             <ul className="space-y-3 text-xs sm:text-sm text-slate-400">
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <a href="https://wa.me/6287809350732" className="hover:text-white font-medium">
-                  +62 878-0935-0732 (Booking WA)
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <a href="https://wa.me/6283820880547" className="hover:text-white font-medium">
-                  +62 838 2088 0547 (Info Hotel)
+                <a href="https://wa.me/6287820880547" className="hover:text-white font-medium">
+                  +62 878-2088-0547 (WhatsApp Pemesanan)
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
