@@ -53,8 +53,8 @@ export default function ExploreDestinations({
 
   const categories = [
     { id: 'all', label: t('Semua Paket Resmi', 'All Official Packages') },
-    { id: 'stay', label: t('Paket Menginap (2D1N)', '2D1N Stay Tours') },
-    { id: 'snorkeling', label: t('Private Snorkeling (Gili)', 'Private Snorkeling') },
+    { id: 'stay', label: t('Paket Menginap (2D1N – 5D4N)', 'Stay Tours (2D1N – 5D4N)') },
+    { id: 'snorkeling', label: t('Private Snorkeling (3 Gili)', 'Private Snorkeling') },
     { id: 'oneday', label: t('One Day Trip', 'One Day Trips') },
   ];
 
@@ -82,14 +82,14 @@ export default function ExploreDestinations({
             </h2>
           </div>
 
-          {/* Action Button: View 2D1N Price Matrix Table */}
+          {/* Action Button: View Full Price Matrix Table */}
           <div className="flex items-center gap-3">
             <button
               onClick={onOpenPriceMatrix}
               className="inline-flex items-center gap-2 border-2 border-sky-500 text-sky-600 hover:bg-sky-500 hover:text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer shadow-xs"
             >
               <Table className="w-4 h-4" />
-              <span>{t('Tabel Harga 2D1N (Lengkap)', '2D1N Full Price Table')}</span>
+              <span>{t('Tabel Pricelist (2D1N – 5D4N)', 'Full Price Tables (2D1N – 5D4N)')}</span>
             </button>
           </div>
         </div>
@@ -111,8 +111,8 @@ export default function ExploreDestinations({
           ))}
         </div>
 
-        {/* EXACT PACKAGES GRID (FROM THE 5 IMAGES ONLY!) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        {/* EXACT PACKAGES GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {filteredPackages.map((pkg, idx) => (
             <div
               key={pkg.id}

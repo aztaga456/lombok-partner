@@ -182,7 +182,7 @@ export function generateBookingPdf(booking: BookingResult): jsPDF {
   doc.setFontSize(9.5);
   doc.setFont('helvetica', 'bold');
   const pkgName = booking.packageItem.name.id;
-  doc.text(pkgName.length > 40 ? pkgName.substring(0, 38) + '...' : pkgName, margin + 5, currentY + 11);
+  doc.text(pkgName.length > 52 ? pkgName.substring(0, 50) + '...' : pkgName, margin + 5, currentY + 11);
 
   doc.setTextColor(15, 23, 42);
   doc.setFontSize(9);

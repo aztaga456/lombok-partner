@@ -50,8 +50,8 @@ export default function PackageDetailModal({
 
   // Calculate price dynamically based on package type
   const calculatePricing = () => {
-    // 1. If it's the 2D1N Package, use the Tiered Matrix from flyer 1
-    if (packageItem.id === 'paket-2d1n' && packageItem.tierPrices) {
+    // 1. If it's a stay package with Tiered Matrix (2D1N, 3D2N, 4D3N, 5D4N)
+    if (packageItem.tierPrices && packageItem.tierPrices.length > 0) {
       const totalParticipants = formData.adults + formData.children;
       // find tier
       const tier =
@@ -373,8 +373,8 @@ export default function PackageDetailModal({
                     />
                   </div>
 
-                  {/* If 2D1N Package: Hotel Option Selector (Tanpa Hotel / Bintang 2/3/4/5) */}
-                  {packageItem.id === 'paket-2d1n' && (
+                  {/* If Multi-Day Stay Package (2D1N, 3D2N, 4D3N, 5D4N): Hotel Option Selector */}
+                  {(packageItem.category === 'stay' || (packageItem.tierPrices && packageItem.tierPrices.length > 0)) && (
                     <div>
                       <label className="block text-xs font-bold text-slate-700 mb-1">
                         {t('Pilihan Akomodasi Hotel', 'Accommodation Choice')}

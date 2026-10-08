@@ -93,8 +93,8 @@ export default function Footer() {
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               {t(
-                'Mitra resmi dan terpercaya perjalanan wisata Anda di Pulau Lombok. Menyediakan Paket Wisata 2D1N, Gili Trilogy Private Snorkeling, Senaru & Sembalun, Sasak Tour Mandalika, dan Pilihan Hotel Terlengkap.',
-                'Your official and trusted travel partner in Lombok Island. Providing 2D1N Tour Packages, Gili Trilogy Private Snorkeling, Senaru & Sembalun trips, Sasak Mandalika tours, and curated Hotel & Resort choices.'
+                'Mitra resmi dan terpercaya perjalanan wisata Anda di Pulau Lombok. Menyediakan Paket Wisata Menginap 2D1N s/d 5D4N, Gili Trilogy Private Snorkeling, Senaru & Sembalun, Sasak Tour Mandalika, dan Pilihan Hotel Terlengkap.',
+                'Your official and trusted travel partner in Lombok Island. Providing 2D1N to 5D4N Tour Packages, Gili Trilogy Private Snorkeling, Senaru & Sembalun trips, Sasak Mandalika tours, and curated Hotel & Resort choices.'
               )}
             </p>
 
@@ -134,10 +134,25 @@ export default function Footer() {
             <h4 className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
               {t('Paket Wisata Resmi', 'Official Tour Packages')}
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
               <li>
                 <a href="#packages" className="hover:text-sky-400 transition-colors">
-                  Paket Wisata 2D1N (Menginap)
+                  Paket Wisata 2 Hari 1 Malam (2D1N)
+                </a>
+              </li>
+              <li>
+                <a href="#packages" className="hover:text-sky-400 transition-colors">
+                  Paket Wisata 3 Hari 2 Malam (3D2N)
+                </a>
+              </li>
+              <li>
+                <a href="#packages" className="hover:text-sky-400 transition-colors">
+                  Paket Wisata 4 Hari 3 Malam (4D3N)
+                </a>
+              </li>
+              <li>
+                <a href="#packages" className="hover:text-sky-400 transition-colors">
+                  Paket Wisata 5 Hari 4 Malam (5D4N)
                 </a>
               </li>
               <li>
@@ -148,11 +163,6 @@ export default function Footer() {
               <li>
                 <a href="#packages" className="hover:text-sky-400 transition-colors">
                   One Day Trip: Senaru & Sembalun
-                </a>
-              </li>
-              <li>
-                <a href="#packages" className="hover:text-sky-400 transition-colors">
-                  One Day Trip: Sasak & Mandalika
                 </a>
               </li>
             </ul>

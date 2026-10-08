@@ -43,8 +43,8 @@ export default function SearchModal({
             type="text"
             autoFocus
             placeholder={t(
-              'Cari paket resmi (misal: 2D1N, Gili Trilogy, Senaru, Mandalika)...',
-              'Search official packages (e.g. 2D1N, Gili Trilogy, Senaru, Mandalika)...'
+              'Cari paket resmi (misal: 2D1N, 3D2N, 4D3N, 5D4N, Gili, Sembalun)...',
+              'Search official packages (e.g. 2D1N, 3D2N, 4D3N, 5D4N, Gili, Sembalun)...'
             )}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
