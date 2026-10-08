@@ -46,15 +46,15 @@ export default function HotelDatabaseSection() {
             )}
           </p>
 
-          {/* 4 Location Filter Pills matching user reference */}
-          <div className="flex items-center justify-center gap-2.5 sm:gap-3 mt-7 overflow-x-auto pb-2 scrollbar-none">
+          {/* 4 Location Filter Pills: 2 rows on mobile (2 atas, 2 bawah), flex row on desktop */}
+          <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-center gap-2.5 sm:gap-3 mt-7 max-w-sm sm:max-w-none mx-auto w-full px-2 sm:px-0">
             {locationTabs.map((tab) => {
               const isActive = selectedLocation === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setSelectedLocation(tab.id)}
-                  className={`text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer flex-shrink-0 ${
+                  className={`text-xs sm:text-sm font-bold px-3 sm:px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer text-center justify-center flex items-center whitespace-nowrap ${
                     isActive
                       ? 'bg-sky-600 text-white shadow-md shadow-sky-500/25 ring-2 ring-sky-600/20 scale-102'
                       : 'bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/90 shadow-2xs'
