@@ -16,6 +16,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import SearchModal from '@/components/SearchModal';
 import Footer from '@/components/Footer';
 import { PackageItem, BookingResult } from '@/types';
+import { LOMBOK_PACKAGES } from '@/data/packages';
 import { LanguageProvider, useLanguage } from '@/context/LanguageContext';
 
 function MainApp() {
