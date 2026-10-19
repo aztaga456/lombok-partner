@@ -45,31 +45,31 @@ export default function PopularDestination() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT COLUMN: PETA LOMBOK TRANSPARAN DI TENGAH + FOTO DESTINASI DENGAN GARIS TITIK-TITIK PENGHUBUNG */}
+          {/* LEFT COLUMN: PETA LOMBOK DI TENGAH (FULL COLOR) + 4 FOTO DESTINASI PRESISI DENGAN TINGGI SEIMBANG */}
           <div
-            className={`lg:col-span-6 relative flex items-center justify-center min-h-[520px] sm:min-h-[580px] md:min-h-[640px] w-full max-w-[560px] mx-auto transition-all duration-700 ease-out ${
+            className={`lg:col-span-6 relative flex items-center justify-center min-h-[460px] sm:min-h-[490px] md:min-h-[510px] lg:min-h-[520px] w-full max-w-[540px] mx-auto transition-all duration-700 ease-out ${
               isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
             }`}
           >
             
-            {/* 1. Center Transparent Lombok Island Map Backdrop */}
+            {/* 1. Center Lombok Island Map (Non-transparan, Full Color Opaque Graphic) */}
             <div
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[360px] md:w-[410px] aspect-square pointer-events-none z-0 transition-all duration-1000 ease-out delay-150 ${
-                isVisible ? 'opacity-35 scale-100' : 'opacity-0 scale-75'
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] sm:w-[310px] md:w-[340px] aspect-[971/673] pointer-events-none z-10 transition-all duration-1000 ease-out delay-150 ${
+                isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
               }`}
             >
               <Image
-                src="/lombok-map-transparent.png"
-                alt="Peta Pulau Lombok"
+                src="/lombok-island-map.png"
+                alt="Peta Pulau Lombok Full Color"
                 fill
-                className="object-contain filter drop-shadow-[0_10px_25px_rgba(14,165,233,0.18)]"
+                className="object-contain filter drop-shadow-[0_12px_28px_rgba(16,185,129,0.22)]"
                 priority
               />
             </div>
 
             {/* 2. Dotted Connecting Lines with Origin Pins to Destination Photos */}
             <div
-              className={`absolute inset-0 pointer-events-none z-10 transition-all duration-1000 ease-out delay-200 ${
+              className={`absolute inset-0 pointer-events-none z-0 transition-all duration-1000 ease-out delay-200 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -81,7 +81,7 @@ export default function PopularDestination() {
               >
                 {/* Line 1: Northwest Map Pin -> Top-Left Photo (3 Gili Snorkeling) */}
                 <path
-                  d="M 185,170 C 150,140 120,110 85,90"
+                  d="M 180,190 C 150,160 130,135 110,115"
                   stroke="#0284c7"
                   strokeWidth="2.2"
                   strokeDasharray="4 5"
@@ -90,7 +90,7 @@ export default function PopularDestination() {
 
                 {/* Line 2: Northeast Map Pin -> Top-Right Photo (Sembalun & Rinjani) */}
                 <path
-                  d="M 330,160 C 365,130 395,100 425,75"
+                  d="M 335,185 C 365,155 385,135 405,115"
                   stroke="#0284c7"
                   strokeWidth="2.2"
                   strokeDasharray="4 5"
@@ -99,7 +99,7 @@ export default function PopularDestination() {
 
                 {/* Line 3: Southwest Map Pin -> Bottom-Left Photo (Pantai Mandalika) */}
                 <path
-                  d="M 195,330 C 165,365 130,400 95,420"
+                  d="M 190,325 C 160,355 140,375 120,395"
                   stroke="#0284c7"
                   strokeWidth="2.2"
                   strokeDasharray="4 5"
@@ -108,7 +108,7 @@ export default function PopularDestination() {
 
                 {/* Line 4: Southeast Map Pin -> Bottom-Right Photo (Pantai Pasir Putih) */}
                 <path
-                  d="M 320,340 C 350,375 385,405 415,425"
+                  d="M 325,330 C 355,355 375,375 395,395"
                   stroke="#0284c7"
                   strokeWidth="2.2"
                   strokeDasharray="4 5"
@@ -117,43 +117,43 @@ export default function PopularDestination() {
 
                 {/* Origin Map Pins (Glowing interactive dot points) */}
                 {/* Pin 1: 3 Gili */}
-                <circle cx="185" cy="170" r="5" fill="#0284c7" />
-                <circle cx="185" cy="170" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.6" />
+                <circle cx="180" cy="190" r="5" fill="#0284c7" />
+                <circle cx="180" cy="190" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.7" />
 
                 {/* Pin 2: Sembalun / Rinjani */}
-                <circle cx="330" cy="160" r="5" fill="#0284c7" />
-                <circle cx="330" cy="160" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.6" />
+                <circle cx="335" cy="185" r="5" fill="#0284c7" />
+                <circle cx="335" cy="185" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.7" />
 
-                {/* Pin 3: Mandalika / Tanjung Aan */}
-                <circle cx="195" cy="330" r="5" fill="#0284c7" />
-                <circle cx="195" cy="330" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.6" />
+                {/* Pin 3: Mandalika / Sasak */}
+                <circle cx="190" cy="325" r="5" fill="#0284c7" />
+                <circle cx="190" cy="325" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.7" />
 
                 {/* Pin 4: Pantai Selatan */}
-                <circle cx="320" cy="340" r="5" fill="#0284c7" />
-                <circle cx="320" cy="340" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.6" />
+                <circle cx="325" cy="330" r="5" fill="#0284c7" />
+                <circle cx="325" cy="330" r="9" stroke="#38bdf8" strokeWidth="1.5" opacity="0.7" />
               </svg>
 
               {/* Decorative flight airplane icon */}
               <div
-                className={`absolute top-6 right-10 transform rotate-[-25deg] text-sky-500 transition-all duration-700 delay-500 ${
+                className={`absolute top-5 right-8 transform rotate-[-25deg] text-sky-500 transition-all duration-700 delay-500 ${
                   isVisible ? 'opacity-100 scale-100 translate-x-0 translate-y-0' : 'opacity-0 scale-0 -translate-x-12 translate-y-12'
                 }`}
               >
-                <Send className="w-6 h-6 fill-sky-500/20" />
+                <Send className="w-5 h-5 fill-sky-500/20" />
               </div>
             </div>
 
-            {/* 3. PHOTO DESTINASI SEKITAR PETA DENGAN UKURAN BERBEDA-BEDA */}
+            {/* 3. PHOTO DESTINASI SEKITAR PETA DENGAN UKURAN PRESISI & SEIMBANG */}
 
-            {/* Photo 1: KIRI ATAS - Snorkeling Patung Gili Meno (Ukuran Menengah) */}
+            {/* Photo 1: KIRI ATAS - Snorkeling Patung Gili Meno */}
             <div
-              className={`absolute top-2 left-0 sm:left-2 md:left-3 z-20 w-[185px] sm:w-[210px] md:w-[230px] bg-white p-2 sm:p-2.5 pb-3.5 rounded-2xl shadow-xl polaroid-card transition-all duration-700 ease-out transform ${
+              className={`absolute top-0 left-0 sm:left-1 z-20 w-[150px] sm:w-[170px] md:w-[185px] bg-white p-2 pb-3 rounded-2xl shadow-xl polaroid-card transition-all duration-700 ease-out transform ${
                 isVisible
                   ? 'opacity-100 scale-100 -rotate-3 translate-x-0 translate-y-0'
                   : 'opacity-0 scale-50 rotate-0 -translate-x-12 -translate-y-12'
               } hover:rotate-0`}
             >
-              <div className="relative h-32 sm:h-38 md:h-40 w-full overflow-hidden rounded-xl">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/packages/gili-trilogy.jpg"
                   alt="3 Gili Snorkeling & The Nest Statues"
@@ -171,15 +171,15 @@ export default function PopularDestination() {
               </div>
             </div>
 
-            {/* Photo 2: KANAN ATAS - Lembah Sembalun & Rinjani (UKURAN PALING BESAR) */}
+            {/* Photo 2: KANAN ATAS - Lembah Sembalun & Rinjani (LEBIH KECIL SESUAI PERMINTAAN) */}
             <div
-              className={`absolute top-0 right-0 sm:right-2 md:right-3 z-20 w-[205px] sm:w-[235px] md:w-[260px] bg-white p-2 sm:p-2.5 pb-3.5 rounded-2xl shadow-2xl polaroid-card transition-all duration-700 delay-150 ease-out transform ${
+              className={`absolute top-2 right-0 sm:right-1 z-20 w-[130px] sm:w-[145px] md:w-[160px] bg-white p-2 pb-2.5 rounded-2xl shadow-xl polaroid-card transition-all duration-700 delay-150 ease-out transform ${
                 isVisible
-                  ? 'opacity-100 scale-100 rotate-4 translate-x-0 -translate-y-0'
+                  ? 'opacity-100 scale-100 rotate-3 translate-x-0 translate-y-0'
                   : 'opacity-0 scale-0 rotate-0 translate-x-12 -translate-y-12'
               } hover:rotate-0`}
             >
-              <div className="relative h-34 sm:h-40 md:h-44 w-full overflow-hidden rounded-xl">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/packages/senaru-sembalun.jpg"
                   alt="Sembalun Valley & Mount Rinjani View"
@@ -187,51 +187,51 @@ export default function PopularDestination() {
                   className="object-cover"
                 />
               </div>
-              <div className="mt-2 text-center">
-                <span className="text-[11px] font-bold text-slate-800 tracking-tight block">
-                  Sembalun & Gunung Rinjani
+              <div className="mt-1.5 text-center">
+                <span className="text-[10.5px] font-bold text-slate-800 tracking-tight block">
+                  Lembah Sembalun
                 </span>
-                <span className="text-[9px] text-emerald-600 font-semibold block">
-                  Panorama Lembah Bintang
+                <span className="text-[8.5px] text-emerald-600 font-semibold block">
+                  Kaki Gunung Rinjani
                 </span>
               </div>
             </div>
 
-            {/* Photo 3: KIRI BAWAH - Pantai Tanjung Aan / Mandalika (UKURAN PALING MUNGIL & MANIS) */}
+            {/* Photo 3: KIRI BAWAH - Pantai Mandalika & Sade (GAMBAR JELAS & TAMPIL PENUH) */}
             <div
-              className={`absolute bottom-2 left-0 sm:left-2 md:left-4 z-20 w-[155px] sm:w-[175px] md:w-[190px] bg-white p-2 pb-3 rounded-2xl shadow-xl polaroid-card transition-all duration-700 delay-300 ease-out transform ${
+              className={`absolute bottom-1 left-0 sm:left-1 z-20 w-[140px] sm:w-[160px] md:w-[175px] bg-white p-2 pb-3 rounded-2xl shadow-xl polaroid-card transition-all duration-700 delay-300 ease-out transform ${
                 isVisible
-                  ? 'opacity-100 scale-100 -rotate-6 translate-x-0 translate-y-0'
+                  ? 'opacity-100 scale-100 -rotate-2 translate-x-0 translate-y-0'
                   : 'opacity-0 scale-0 rotate-0 -translate-x-12 translate-y-12'
               } hover:rotate-0`}
             >
-              <div className="relative h-26 sm:h-30 md:h-34 w-full overflow-hidden rounded-xl">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="/packages/paket-4d3n.jpg"
+                  src="/packages/sasak-mandalika.jpg"
                   alt="Pantai Tanjung Aan & Bukit Merese Mandalika"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="mt-1.5 text-center">
-                <span className="text-[10px] font-bold text-slate-800 tracking-tight block">
+                <span className="text-[10.5px] font-bold text-slate-800 tracking-tight block">
                   Pantai Mandalika
                 </span>
                 <span className="text-[8.5px] text-sky-600 font-semibold block">
-                  Teluk Toska & Pasir Merica
+                  Bukit Merese & Sade
                 </span>
               </div>
             </div>
 
-            {/* Photo 4: KANAN BAWAH - Pantai Pasir Putih & Perahu Kayu (UKURAN SEDANG LEBAR) */}
+            {/* Photo 4: KANAN BAWAH - Pantai Pasir Putih & Perahu Kayu */}
             <div
-              className={`absolute bottom-0 right-0 sm:right-2 md:right-3 z-20 w-[180px] sm:w-[210px] md:w-[225px] bg-white p-2 sm:p-2.5 pb-3.5 rounded-2xl shadow-xl polaroid-card transition-all duration-700 delay-500 ease-out transform ${
+              className={`absolute bottom-0 right-0 sm:right-1 z-20 w-[145px] sm:w-[165px] md:w-[180px] bg-white p-2 pb-3 rounded-2xl shadow-xl polaroid-card transition-all duration-700 delay-500 ease-out transform ${
                 isVisible
-                  ? 'opacity-100 scale-100 rotate-3 translate-x-0 translate-y-0'
+                  ? 'opacity-100 scale-100 rotate-2 translate-x-0 translate-y-0'
                   : 'opacity-0 scale-0 rotate-0 translate-x-12 translate-y-12'
               } hover:rotate-0`}
             >
-              <div className="relative h-28 sm:h-34 md:h-38 w-full overflow-hidden rounded-xl">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/packages/paket-3d2n.jpg"
                   alt="Pantai Tropis & Perahu Tradisional Lombok"
@@ -240,10 +240,10 @@ export default function PopularDestination() {
                 />
               </div>
               <div className="mt-2 text-center">
-                <span className="text-[11px] font-bold text-slate-800 tracking-tight block">
+                <span className="text-[10.5px] font-bold text-slate-800 tracking-tight block">
                   Pantai Pasir Putih
                 </span>
-                <span className="text-[9px] text-amber-600 font-semibold block">
+                <span className="text-[8.5px] text-amber-600 font-semibold block">
                   Perahu Kayu Tradisional
                 </span>
               </div>
