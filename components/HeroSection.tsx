@@ -85,19 +85,34 @@ export default function HeroSection({
         id="home"
         className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-24 sm:pb-28 overflow-hidden"
       >
-        {/* Background Image: Preloaded Priority Next.js Image for Instant Rendering */}
+        {/* Background Image: Responsive Ultra-Sharp HD Images (Mobile 9:16 & Desktop 16:9) */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <Image
-            src="/hero-lombok-beach.webp"
-            alt="Pantai Tropis Lombok Partner"
-            fill
-            priority
-            quality={90}
-            sizes="100vw"
-            className="object-cover object-[center_38%] md:object-center transition-transform duration-1000 scale-105"
-          />
+          {/* Mobile Background (Vertical Portrait 9:16 - 1080x1920 Ultra Sharp, Zero Blur) */}
+          <div className="block md:hidden absolute inset-0">
+            <Image
+              src="/hero-lombok-beach-mobile.webp"
+              alt="Pantai Tropis Lombok Partner"
+              fill
+              priority
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Desktop/Tablet Background (Widescreen 16:9 - 2560x1440 QHD Ultra Sharp) */}
+          <div className="hidden md:block absolute inset-0">
+            <Image
+              src="/hero-lombok-beach.webp"
+              alt="Pantai Tropis Lombok Partner"
+              fill
+              priority
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
           {/* Natural daylight & cinematic readability gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/30 to-transparent z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/25 to-transparent z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-slate-950/20 z-[1]" />
         </div>
 
