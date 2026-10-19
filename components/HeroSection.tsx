@@ -145,10 +145,10 @@ export default function HeroSection({
                     <span className="inline-block w-[3.5px] h-[0.75em] ml-1.5" />
                   </span>
 
-                  {/* 2. Teks aktif yang sedang diketik & berganti secara continue */}
-                  <span className="absolute inset-0 flex items-center text-orange-500 whitespace-nowrap drop-shadow-[0_4px_22px_rgba(249,115,22,0.75)]">
+                  {/* 2. Teks aktif yang sedang diketik & berganti secara continue (Warna Hijau Muda) */}
+                  <span className="absolute inset-0 flex items-center text-emerald-400 whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] drop-shadow-[0_0_20px_rgba(52,211,153,0.75)]">
                     <span>{displayText}</span>
-                    <span className="inline-block w-[3.5px] h-[0.75em] bg-orange-500 ml-1.5 rounded-full animate-pulse shadow-[0_0_14px_#f97316] flex-shrink-0" />
+                    <span className="inline-block w-[3.5px] h-[0.75em] bg-emerald-400 ml-1.5 rounded-full animate-pulse shadow-[0_0_14px_#34d399] flex-shrink-0" />
                   </span>
                 </span>
               </h1>
