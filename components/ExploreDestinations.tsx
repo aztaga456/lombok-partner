@@ -195,14 +195,14 @@ export default function ExploreDestinations({
                   )}
                 </div>
 
-                {/* Price and CTA row */}
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                {/* Price and CTA Section (Neat 2-tier layout) */}
+                <div className="mt-5 pt-4 border-t border-slate-100/90 flex flex-col gap-3">
                   <div>
-                    <span className="text-[11px] text-slate-400 block uppercase font-bold tracking-wider">
+                    <span className="text-[10px] text-slate-400 block uppercase font-bold tracking-wider leading-none mb-1.5">
                       {t('Harga Paket Resmi', 'Official Package Price')}
                     </span>
-                    <div className="flex items-baseline gap-1 mt-0.5">
-                      <span className="text-xl sm:text-2xl font-black text-sky-600">
+                    <div className="flex items-baseline gap-1.5 flex-wrap">
+                      <span className="text-2xl sm:text-3xl font-black text-sky-600 tracking-tight">
                         Rp {pkg.price.toLocaleString('id-ID')}
                       </span>
                       <span className="text-xs text-slate-500 font-medium">
@@ -211,9 +211,9 @@ export default function ExploreDestinations({
                     </div>
                   </div>
 
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 group-hover:from-sky-600 group-hover:to-blue-700 text-white px-5 py-2.5 rounded-full text-xs font-bold shadow-md shadow-sky-500/20 transition-all duration-200">
+                  <div className="w-full py-2.5 sm:py-3 px-4 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 group-hover:from-sky-600 group-hover:to-blue-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 group-hover:shadow-lg transition-all duration-200 cursor-pointer">
                     <span>{t('Detail & Pesan', 'View & Book')}</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                   </div>
                 </div>
 
