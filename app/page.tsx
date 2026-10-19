@@ -59,10 +59,10 @@ function MainApp() {
       {/* 2. Hero Section - Glassmorphic Tropical Beach */}
       <HeroSection
         onExploreClick={handleExploreClick}
-        onWatchVideoClick={() => {
-          const videoSection = document.getElementById('destinations');
-          if (videoSection) {
-            videoSection.scrollIntoView({ behavior: 'smooth' });
+        onCheckHotelsClick={() => {
+          const hotelSection = document.getElementById('hotels');
+          if (hotelSection) {
+            hotelSection.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         onSelectFeaturedPackage={() => {

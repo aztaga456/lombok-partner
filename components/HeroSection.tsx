@@ -12,18 +12,21 @@ import {
   Compass,
   Headphones,
   CheckCircle2,
+  Building2,
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
-  onWatchVideoClick: () => void;
+  onWatchVideoClick?: () => void;
+  onCheckHotelsClick?: () => void;
   onSelectFeaturedPackage?: () => void;
 }
 
 export default function HeroSection({
   onExploreClick,
   onWatchVideoClick,
+  onCheckHotelsClick,
   onSelectFeaturedPackage,
 }: HeroSectionProps) {
   const { lang, t } = useLanguage();
@@ -154,15 +157,15 @@ export default function HeroSection({
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </button>
 
-                {/* Secondary Frosted Glass Pill Button */}
+                {/* Secondary Frosted Glass Pill Button: Cek Pilihan Hotel */}
                 <button
-                  onClick={onWatchVideoClick}
+                  onClick={onCheckHotelsClick || onWatchVideoClick}
                   className="inline-flex items-center gap-2.5 bg-white/15 hover:bg-white/25 active:bg-white/35 text-white font-semibold text-xs sm:text-sm md:text-base px-6 sm:px-7 py-3.5 sm:py-4 rounded-full border border-white/60 backdrop-blur-md shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group cursor-pointer"
                 >
                   <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/25 flex items-center justify-center text-white group-hover:bg-white group-hover:text-sky-600 transition-colors">
-                    <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current ml-0.5" />
+                    <Building2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </div>
-                  <span>{t('Tonton Video', 'Watch Video')}</span>
+                  <span>{t('Cek Pilihan Hotel', 'Explore Hotels')}</span>
                 </button>
               </div>
 
