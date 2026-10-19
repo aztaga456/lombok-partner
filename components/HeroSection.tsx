@@ -88,17 +88,17 @@ export default function HeroSection({
         {/* Background Image: Preloaded Priority Next.js Image for Instant Rendering */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=2000&q=80"
-            alt="Lombok Tropical Beach"
+            src="/hero-lombok-beach.webp"
+            alt="Pantai Tropis Lombok Partner"
             fill
             priority
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="object-cover object-center transition-transform duration-1000 scale-105"
+            className="object-cover object-[center_38%] md:object-center transition-transform duration-1000 scale-105"
           />
-          {/* Natural daylight gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-sky-950/25 to-transparent z-1" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent z-1" />
+          {/* Natural daylight & cinematic readability gradient overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/30 to-transparent z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-slate-950/20 z-[1]" />
         </div>
 
         {/* Hero Content: 2-Column Layout matching reference image */}
