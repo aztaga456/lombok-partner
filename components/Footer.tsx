@@ -15,6 +15,14 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
+function TikTokIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   const { lang, t } = useLanguage();
 
@@ -100,31 +108,42 @@ export default function Footer() {
 
             <div className="pt-2 flex items-center gap-3 text-slate-400">
               <a
-                href="https://instagram.com/lombok.partner"
+                href="https://www.instagram.com/lombok_partner"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 hover:text-white flex items-center justify-center transition-all duration-200"
+                aria-label="Instagram @lombok_partner"
+                title="Instagram @lombok_partner"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.tiktok.com/@lombokpartner"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Facebook"
+                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-900 hover:text-white hover:ring-1 hover:ring-slate-600 flex items-center justify-center transition-all duration-200"
+                aria-label="TikTok @lombokpartner"
+                title="TikTok @lombokpartner"
               >
-                <Facebook className="w-4 h-4" />
+                <TikTokIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://youtube.com"
+                href="mailto:partnerlombok@gmail.com"
+                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-all duration-200"
+                aria-label="Email partnerlombok@gmail.com"
+                title="Email partnerlombok@gmail.com"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/6287820880547"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="YouTube"
+                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all duration-200"
+                aria-label="WhatsApp +62 878-2088-0547"
+                title="WhatsApp +62 878-2088-0547"
               >
-                <Youtube className="w-4 h-4" />
+                <Phone className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -197,7 +216,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Official Contacts from Flyers */}
+          {/* Official Contacts */}
           <div>
             <h4 className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
               {t('Kontak Resmi', 'Official Contacts')}
@@ -205,17 +224,56 @@ export default function Footer() {
             <ul className="space-y-3 text-xs sm:text-sm text-slate-400">
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <a href="https://wa.me/6287820880547" className="hover:text-white font-medium">
-                  +62 878-2088-0547 (WhatsApp Pemesanan)
+                <a
+                  href="https://wa.me/6287820880547"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white font-medium transition-colors"
+                >
+                  +62 878-2088-0547 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <span className="text-slate-300">www.lombokpartner.com</span>
+                <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                <a
+                  href="mailto:partnerlombok@gmail.com"
+                  className="hover:text-white font-medium transition-colors"
+                >
+                  partnerlombok@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Instagram className="w-4 h-4 text-pink-400 flex-shrink-0" />
-                <span className="text-slate-300">@lombok.partner</span>
+                <a
+                  href="https://www.instagram.com/lombok_partner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white font-medium transition-colors"
+                >
+                  @lombok_partner
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <TikTokIcon className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                <a
+                  href="https://www.tiktok.com/@lombokpartner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white font-medium transition-colors"
+                >
+                  @lombokpartner
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Globe className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <a
+                  href="https://www.lombokpartner.web.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white font-medium transition-colors"
+                >
+                  www.lombokpartner.web.id
+                </a>
               </li>
             </ul>
           </div>

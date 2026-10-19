@@ -301,7 +301,7 @@ export function generateBookingPdf(booking: BookingResult): jsPDF {
   doc.setFontSize(7.5);
   doc.setTextColor(100, 116, 139);
   doc.text('Jl. Raya Pariwisata Kuta Mandalika - Senggigi, Nusa Tenggara Barat', margin, currentY + 4.5);
-  doc.text('Hotline / WhatsApp: +62 878-2088-0547 | Email: info@lombokpartner.com', margin, currentY + 8.5);
+  doc.text('Hotline / WA: +62 878-2088-0547 | Email: partnerlombok@gmail.com | IG: @lombok_partner', margin, currentY + 8.5);
 
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(16, 185, 129);
