@@ -288,38 +288,74 @@ export default function PopularDestination() {
               </p>
             </div>
 
-            {/* 3 Circular Feature Icons (Slide dari Kanan) */}
+            {/* 3 Circular Feature Icons -> 3D Spheres dengan Motion Bergerak & Teks di Samping */}
             <div
-              className={`grid grid-cols-3 gap-3 sm:gap-6 mb-8 transition-all duration-700 ease-out delay-300 transform ${
+              className={`grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 transition-all duration-700 ease-out delay-300 transform ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20 md:translate-x-28'
               }`}
             >
               
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left group">
-                <div className="w-12 h-12 rounded-full border-2 border-sky-400 bg-sky-50/60 flex items-center justify-center text-sky-600 mb-2.5 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
-                  <Palmtree className="w-6 h-6 stroke-[1.8]" />
+              {/* Item 1: Pantai Eksotis */}
+              <div className="flex items-center gap-3 p-2.5 sm:p-2 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-100 hover:border-sky-100 hover:shadow-md transition-all duration-300 group">
+                <div className="relative flex-shrink-0 animate-float-3d-1">
+                  {/* Soft ambient glow */}
+                  <div className="absolute inset-0 rounded-full bg-sky-400/35 blur-md group-hover:bg-sky-400/60 transition-all duration-300" />
+                  {/* 3D Orb */}
+                  <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-cyan-300 via-sky-500 to-blue-700 flex items-center justify-center text-white shadow-[0_8px_16px_-3px_rgba(2,132,199,0.5),inset_0_3px_5px_rgba(255,255,255,0.75),inset_0_-3px_5px_rgba(0,0,0,0.3)] border-t border-l border-white/60 group-hover:scale-110 transition-transform duration-300">
+                    <span className="absolute top-1.5 left-2 w-3.5 h-1.5 rounded-full bg-white/70 blur-[0.4px] -rotate-45 pointer-events-none" />
+                    <Palmtree className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2.2] drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]" />
+                  </div>
                 </div>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                  {t('Pantai Eksotis', 'Beautiful Beaches')}
-                </span>
+                <div className="flex flex-col text-left min-w-0">
+                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-sky-600 transition-colors leading-tight">
+                    {t('Pantai Eksotis', 'Beautiful Beaches')}
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
+                    {t('Gili & Pasir Putih', 'Gili & White Sands')}
+                  </span>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left group">
-                <div className="w-12 h-12 rounded-full border-2 border-sky-400 bg-sky-50/60 flex items-center justify-center text-sky-600 mb-2.5 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
-                  <Mountain className="w-6 h-6 stroke-[1.8]" />
+              {/* Item 2: Panorama Megah */}
+              <div className="flex items-center gap-3 p-2.5 sm:p-2 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-100 hover:border-teal-100 hover:shadow-md transition-all duration-300 group">
+                <div className="relative flex-shrink-0 animate-float-3d-2">
+                  {/* Soft ambient glow */}
+                  <div className="absolute inset-0 rounded-full bg-teal-400/35 blur-md group-hover:bg-teal-400/60 transition-all duration-300" />
+                  {/* 3D Orb */}
+                  <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-emerald-300 via-teal-500 to-sky-700 flex items-center justify-center text-white shadow-[0_8px_16px_-3px_rgba(13,148,136,0.5),inset_0_3px_5px_rgba(255,255,255,0.75),inset_0_-3px_5px_rgba(0,0,0,0.3)] border-t border-l border-white/60 group-hover:scale-110 transition-transform duration-300">
+                    <span className="absolute top-1.5 left-2 w-3.5 h-1.5 rounded-full bg-white/70 blur-[0.4px] -rotate-45 pointer-events-none" />
+                    <Mountain className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2.2] drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]" />
+                  </div>
                 </div>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                  {t('Panorama Megah', 'Stunning Landscapes')}
-                </span>
+                <div className="flex flex-col text-left min-w-0">
+                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-teal-600 transition-colors leading-tight">
+                    {t('Panorama Megah', 'Stunning Landscapes')}
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
+                    {t('Rinjani & Lembah', 'Mount & Valleys')}
+                  </span>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left group">
-                <div className="w-12 h-12 rounded-full border-2 border-sky-400 bg-sky-50/60 flex items-center justify-center text-sky-600 mb-2.5 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
-                  <Heart className="w-6 h-6 stroke-[1.8]" />
+              {/* Item 3: Budaya Otentik */}
+              <div className="flex items-center gap-3 p-2.5 sm:p-2 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-100 hover:border-rose-100 hover:shadow-md transition-all duration-300 group">
+                <div className="relative flex-shrink-0 animate-float-3d-3">
+                  {/* Soft ambient glow */}
+                  <div className="absolute inset-0 rounded-full bg-rose-400/35 blur-md group-hover:bg-rose-400/60 transition-all duration-300" />
+                  {/* 3D Orb */}
+                  <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-rose-300 via-pink-500 to-purple-600 flex items-center justify-center text-white shadow-[0_8px_16px_-3px_rgba(225,29,72,0.45),inset_0_3px_5px_rgba(255,255,255,0.75),inset_0_-3px_5px_rgba(0,0,0,0.3)] border-t border-l border-white/60 group-hover:scale-110 transition-transform duration-300">
+                    <span className="absolute top-1.5 left-2 w-3.5 h-1.5 rounded-full bg-white/70 blur-[0.4px] -rotate-45 pointer-events-none" />
+                    <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white/20 stroke-[2.2] drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]" />
+                  </div>
                 </div>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                  {t('Budaya Otentik', 'Rich Culture')}
-                </span>
+                <div className="flex flex-col text-left min-w-0">
+                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-rose-600 transition-colors leading-tight">
+                    {t('Budaya Otentik', 'Rich Culture')}
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
+                    {t('Desa Adat Sasak', 'Sasak Heritage')}
+                  </span>
+                </div>
               </div>
 
             </div>
