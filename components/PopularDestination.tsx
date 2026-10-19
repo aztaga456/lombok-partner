@@ -103,7 +103,7 @@ export default function PopularDestination() {
               </div>
             </div>
 
-            {/* Photo 1: Large Center Photo (Zoom in keluar utama) */}
+            {/* Photo 1: Large Center Photo (Gili Meno Underwater Statues) */}
             <div
               className={`relative z-10 w-[240px] sm:w-[280px] md:w-[310px] bg-white p-2.5 sm:p-3 pb-4 rounded-xl shadow-xl polaroid-card transition-all duration-700 ease-out transform ${
                 isVisible
@@ -113,15 +113,15 @@ export default function PopularDestination() {
             >
               <div className="relative h-44 sm:h-52 md:h-56 w-full overflow-hidden rounded-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
-                  alt="Gili Islands Coral Reef and Turquoise Water"
+                  src="/packages/gili-trilogy.jpg"
+                  alt="Gili Meno Underwater Statues & Snorkeling"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
 
-            {/* Photo 2: Top Right Photo (Zoom in keluar ke kanan atas) */}
+            {/* Photo 2: Top Right Photo (Sembalun Valley & Mount Rinjani) */}
             <div
               className={`absolute -top-4 right-0 sm:right-6 md:right-8 z-20 w-[140px] sm:w-[170px] md:w-[190px] bg-white p-2 pb-3 rounded-xl shadow-lg polaroid-card transition-all duration-700 delay-150 ease-out transform ${
                 isVisible
@@ -131,15 +131,15 @@ export default function PopularDestination() {
             >
               <div className="relative h-28 sm:h-32 md:h-36 w-full overflow-hidden rounded-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80"
-                  alt="Sunset Senggigi Temple"
+                  src="/packages/senaru-sembalun.jpg"
+                  alt="Sembalun Valley & Mount Rinjani View"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
 
-            {/* Photo 3: Bottom Left Photo (Zoom in keluar ke kiri bawah) */}
+            {/* Photo 3: Bottom Left Photo (Mandalika & Tanjung Aan Bay) */}
             <div
               className={`absolute -bottom-6 left-2 sm:left-6 md:left-8 z-20 w-[140px] sm:w-[170px] md:w-[190px] bg-white p-2 pb-3 rounded-xl shadow-lg polaroid-card transition-all duration-700 delay-300 ease-out transform ${
                 isVisible
@@ -149,15 +149,15 @@ export default function PopularDestination() {
             >
               <div className="relative h-28 sm:h-32 md:h-36 w-full overflow-hidden rounded-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=600&q=80"
-                  alt="Bukit Merese Coastal Panorama"
+                  src="/packages/paket-4d3n.jpg"
+                  alt="Pantai Tanjung Aan & Bukit Merese Mandalika"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
 
-            {/* Photo 4: Bottom Right Photo (Zoom in keluar ke kanan bawah) */}
+            {/* Photo 4: Bottom Right Photo (Tropical Beach & White Boat) */}
             <div
               className={`absolute -bottom-4 right-4 sm:right-10 md:right-14 z-20 w-[130px] sm:w-[155px] md:w-[170px] bg-white p-2 pb-3 rounded-xl shadow-lg polaroid-card transition-all duration-700 delay-500 ease-out transform ${
                 isVisible
@@ -167,8 +167,8 @@ export default function PopularDestination() {
             >
               <div className="relative h-26 sm:h-28 md:h-32 w-full overflow-hidden rounded-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-                  alt="Tropical Sand and Outrigger Boat"
+                  src="/packages/paket-3d2n.jpg"
+                  alt="Pantai Tropis & Perahu Tradisional Lombok"
                   fill
                   className="object-cover"
                 />
