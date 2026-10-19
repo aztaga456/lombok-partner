@@ -254,40 +254,52 @@ export default function HeroSection({
                   </div>
 
                   {/* Package Title */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight tracking-tight mb-1 drop-shadow-sm">
-                    Gili Trilogy
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-sky-200 uppercase tracking-wider mb-1">
+                    <MapPin className="w-3.5 h-3.5 text-sky-300" />
+                    <span>Mandalika, 3 Gili & Mataram</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-white leading-tight tracking-tight mb-2 drop-shadow-sm">
+                    {t('Paket Wisata Lombok 3D2N', 'Lombok Tour Package 3D2N')}
                   </h3>
-                  <p className="text-sm font-semibold text-sky-100 mb-4 drop-shadow-xs">
-                    Private Snorkeling 3 Gili
-                  </p>
 
-                  {/* Duration & Features Pill */}
-                  <div className="flex items-center gap-2 text-xs text-white mb-6 bg-white/20 backdrop-blur-md p-2.5 rounded-xl border border-white/30 shadow-xs">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-300 flex-shrink-0" />
-                    <span className="font-medium">4 – 5 Jam · GoPro HD · Private Boat</span>
+                  {/* Highlights Bullet List (Matches 3D2N card) */}
+                  <div className="space-y-1.5 mb-4 text-[11px] sm:text-xs text-white/95">
+                    <div className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sky-300 mt-1.5 flex-shrink-0" />
+                      <span>{t('Kombinasi sempurna: Pantai Selatan + Snorkeling 3 Gili', 'Best combination: South Coast + 3 Gili Snorkeling')}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sky-300 mt-1.5 flex-shrink-0" />
+                      <span>{t('Spot Patung Bawah Laut The Nest & Penyu Liar', 'The Nest Underwater Statues & Wild Turtles')}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sky-300 mt-1.5 flex-shrink-0" />
+                      <span>{t('Tersedia pilihan Tanpa Hotel & Bintang 2 s/d Bintang 5', 'Available: No Hotel & 2-Star to 5-Star Hotel')}</span>
+                    </div>
                   </div>
 
                   {/* Price Display */}
-                  <div className="pt-1">
-                    <span className="text-[11px] uppercase tracking-wider text-slate-100/90 font-semibold block">
-                      {t('Mulai dari', 'Starting from')}
+                  <div className="pt-2 border-t border-white/20">
+                    <span className="text-[10px] uppercase tracking-wider text-slate-100/90 font-bold block">
+                      {t('HARGA PAKET RESMI', 'OFFICIAL PACKAGE PRICE')}
                     </span>
-                    <div className="flex items-baseline gap-1 mt-0.5 mb-1">
+                    <div className="flex items-baseline gap-1 mt-0.5 mb-0.5">
                       <span className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-md">
-                        Rp 1.000.000
+                        Rp 900.000
                       </span>
                     </div>
                     <span className="text-xs text-slate-100/95 font-medium block">
-                      {t('/ paket privat (Maks. 6 peserta)', '/ private boat (Max 6 pax)')}
+                      {t('/ orang (mulai dari)', '/ person (starting from)')}
                     </span>
                   </div>
 
-                  {/* Reserve Now White Button */}
+                  {/* Detail & Pesan Button */}
                   <button
                     onClick={onSelectFeaturedPackage || onExploreClick}
-                    className="w-full mt-6 bg-white hover:bg-sky-50 active:bg-sky-100 text-slate-900 font-extrabold text-sm py-3.5 px-6 rounded-full shadow-xl hover:scale-[1.02] transition-all duration-200 text-center block cursor-pointer"
+                    className="w-full mt-5 bg-white hover:bg-sky-50 active:bg-sky-100 text-slate-900 font-extrabold text-sm py-3 px-6 rounded-full shadow-xl hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    {t('Reservasi Sekarang →', 'Book Now →')}
+                    <span>{t('Detail & Pesan', 'Details & Book')}</span>
+                    <ArrowRight className="w-4 h-4 text-sky-600" />
                   </button>
 
                 </div>

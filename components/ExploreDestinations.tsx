@@ -136,9 +136,16 @@ export default function ExploreDestinations({
 
                 {/* Top Badges */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                  {/* Min / Max Pax Badge */}
-                  <div className="bg-sky-600/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
-                    {pkg.minPax ? `Min. ${pkg.minPax} Peserta` : `Maks. ${pkg.maxPax} Orang`}
+                  {/* Min / Max Pax Badge + Best Seller Badge */}
+                  <div className="flex items-center gap-1.5">
+                    <div className="bg-sky-600/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                      {pkg.minPax ? `Min. ${pkg.minPax} Peserta` : `Maks. ${pkg.maxPax} Orang`}
+                    </div>
+                    {pkg.id === 'paket-3d2n' && (
+                      <span className="bg-orange-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-md tracking-wider">
+                        BEST SELLER
+                      </span>
+                    )}
                   </div>
 
                   {/* Rating + Heart Favorite Button */}

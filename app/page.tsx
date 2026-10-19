@@ -66,7 +66,7 @@ function MainApp() {
           }
         }}
         onSelectFeaturedPackage={() => {
-          const featured = LOMBOK_PACKAGES.find((p) => p.id === 'gili-trilogy') || LOMBOK_PACKAGES[0];
+          const featured = LOMBOK_PACKAGES.find((p) => p.id === 'paket-3d2n') || LOMBOK_PACKAGES[0];
           handleSelectPackage(featured);
         }}
       />
